@@ -1,0 +1,5 @@
+print("This is a file for testing emacs as a text editor.")
+print("The first thing I notice is that emacs colorcodes strings and commands.")
+print("I think I like how this one looks the best")
+print("Also, I gather that after the learning curve, it becomes very powerful.")
+print("There is a built in tutorial for emacs, which I will go through.")
