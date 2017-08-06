@@ -81,7 +81,7 @@ Upload these 3 files to the [`editors`](editors/) folder.
 
 What terminal editor will be your preferred choice of use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I will use emacs because I like the functionality and how it looks. Hopefully, I can overcome the steep learning curve.
 
 --
 
@@ -89,6 +89,5 @@ What terminal editor will be your preferred choice of use? How did you make your
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
-
+>> I will use PyCharm, because that's what I have used in the past and found that it works well for me. I like that it is set up out of the box to help with Python with autocomplete and intuitive color-coding, and also gives warnings if it suspects you've done something wrong. It has useful navigation shortcuts that can move your cursor to the beginning or end of code blocks or classes. Currently, I haven't made any customizations to the editor because I find the default configuration to be sufficient.
  
