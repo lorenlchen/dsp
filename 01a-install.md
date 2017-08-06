@@ -48,13 +48,13 @@ cross-platform.
 
 Did you install Python 2 or 3? Why?  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Python 3, because HackerRank pre-work is only compatible with Python 3.
 
 ### Q2. Which Python Version Installed   
 
 How can you check the version of Python installed if you happen to be on an unfamiliar computer?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> In Terminal, you can type "python --version" to check which version of Python is the default on the computer. Since Python 2.7 usually comes pre-installed on Macs, you may also want to check "python3 --version" to see if there is a Python 3 version also installed.
 
  
 
