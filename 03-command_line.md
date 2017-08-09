@@ -19,7 +19,16 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > `pwd` show current working directory path
+`mkdir` create a directory
+`rmdir` delete a directory
+`touch` create an empty file
+`rm` delete a file
+`mv`  rename (or move) a file
+`ls -a` list all files (including hidden)
+`cp` copy a file from one path to another (maybe in another directory)
+`cd` change working directory
+`pushd, popd` temporarily change working directory and save current working directory. popd returns you to previous working directory
 
 ---
 
@@ -34,7 +43,13 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > `ls` list files in working directory
+`ls -a` list all files, including hidden
+`ls -l` list files in long format (with information on size, date modified, owner, privileges, etc.
+`ls -lh` list files in long format with suffixes for size (K, M, etc.)
+`ls -lah` list all (including hidden) files in long format with size suffixes
+`ls -t` list files sorted by when they were last modified
+`ls -Glp` list files in long format, color-coded by filetype, and displaying directories with a `/` at the end.
 
 ---
 
@@ -42,7 +57,11 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > `-d` lists only the directories in the working directory
+`-r` reverses the sort order of the list
+`-m` displays as a list separated by commas
+`-1` displays each enty on a separate line
+`-g` uses long format, but without the owner name 
 
 ---
 
@@ -50,7 +69,6 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
-
+> > 
  
 
