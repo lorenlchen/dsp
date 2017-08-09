@@ -12,7 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lists and tuples are both ordered collections of objects, but lists are mutable and tuples are not. In general, the elements of a tuple represent heterogenous types of objects with a certain structure that will be unpacked, e.g. a date is often represented as a tuple in the form `(2017, 08, 09)`. The elements of a list represent the same objects in a certain order, e.g. a list of numbers `[0, 1, 2, 3, 4, 5]`. Tuples will work as dictionary keys while lists will not, because dictionary keys are required to be hashable. All immutable objects in Python are hashable.
 
 ---
 
@@ -20,7 +20,10 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lists and sets are both mutable collections of objects, but used differently. Unlike lists, sets are unordered, and can only contain elements that are hashable. Sets do not contain duplicate elements. Sets also cannot be sliced. Sets in Python are implemented as hash table (which is why their elements must be hashable), which makes membership testing much faster than in lists, which are implemented as dynamic arrays.  
+>> Examples:
+>> * List: `dice_rolls = [4, 3, 1, 5, 4, 6]`, a list of rolls of a die in the sequence they were made. Additional rolls can be added to the end of the list with `dice_rolls.append(n)`.  
+>> * Set: `map_colors = set(['red', 'blue', 'green', 'orange'])`, a set of colors used in drawing a map. The order of colors in the set doesn't matter. It also doesn't make sense for there to be duplicate entries.  
 
 ---
 
