@@ -18,7 +18,11 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    raise NotImplementedError
+
+    if count < 10:
+        return "Number of donuts: " + str(count)
+    else:
+        return "Number of donuts: many"
 
 
 def both_ends(s):
@@ -37,7 +41,10 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
+    if len(s) < 2:
+        return ''
+    else:
+        return s[:2] + s[-2:]
 
 
 def fix_start(s):
@@ -56,7 +63,15 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
+    first_char = s[0]
+    s_list = []
+    s_list.append(first_char)
+    for letter in range(1, len(s)):
+        if s[letter] == first_char:
+            s_list.append('*')
+        else:
+            s_list.append(s[letter])
+    return ''.join(s_list)
 
 
 def mix_up(a, b):
@@ -74,7 +89,9 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
+
+    return b[:2] + a[2:] + " " + a[:2] + b[2:]
+
 
 
 def verbing(s):
@@ -91,7 +108,12 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
+    if s[-3:] == 'ing':
+        return s + 'ly'
+    elif len(s) >= 3:
+        return s + 'ing'
+    else:
+        return s
 
 
 def not_bad(s):
@@ -111,7 +133,12 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
+    not_pos = s.find('not')
+    bad_pos = s.find('bad')
+    if not_pos >= 0 and bad_pos > not_pos:
+        return s[:not_pos] + "good" + s[bad_pos+3:]
+    else:
+        return s
 
 
 def front_back(a, b):
@@ -130,4 +157,12 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+    a_half = int(len(a) / 2)
+    b_half = int(len(b) / 2)
+
+    if len(a) % 2 != 0:
+        a_half = a_half + 1
+    if len(b) % 2 != 0:
+        b_half = b_half + 1
+
+    return a[:a_half] + b[:b_half] + a[a_half:] + b[b_half:]
