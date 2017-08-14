@@ -31,7 +31,11 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> `lambda` is used to create a small, anonymous function that doesn't have to be defined explicitly using a `def …` statement. `lambda` is typically used in conjunction with other functions, such as `sorted`, `map` and `filter`, when it is useful and comprehendable to have a short function defined within the arguments of the other function.  
+>> Example with `sorted`:
+>> `>>> grade_tuples = [('a', 1), ('b', 5), ('c', 2), ('d', 4), ('f', 0)]
+    >>> grade_frequency = sorted(grades, key=lambda grades: grades[1], reverse=True)
+    [('b', 5), ('d', 4), ('c', 2), ('a', 1), ('f', 0)]`
 
 ---
 
@@ -39,7 +43,10 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> List comprehensions are a way to create lists, typically by modifying the contents of an existing list. Typically, list comprehensions can perform the same functions as `map` and `filter`, while being more intuitively readable. A disadvantage of list comprehensions is that they involve creating a temporary variable used for defining the new list, but whose scope is not limited to the list comprehension. That is, if the same variable is used elsewhere, there could be side effects. A list comprehension consists of an expression followed by a for loop involving another list to be passed to that expression, and then some number of for or if clauses (or none). Equivalents also exist for sets and dictionaries.   
+
+>> * Map example: `doubles = [x * 2 for x in range(5)]` is equivalent to `doubles = list(map(lambda x: x*2, range(5)))`  
+>> * Filter example:  `evens = [x for x in range(10) if x % 2 == 0]` is equivalent to `evens = list(filter(lambda x: x % 2 == 0, range(10)))`
 
 ---
 
