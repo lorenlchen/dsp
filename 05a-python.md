@@ -12,7 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lists and tuples are both ordered collections of objects, but lists are mutable and tuples are not. In general, the elements of a tuple represent heterogenous types of objects with a certain structure that will be unpacked, e.g. a date is often represented as a tuple in the form `(2017, 08, 09)`. The elements of a list represent the same objects in a certain order, e.g. a list of numbers `[0, 1, 2, 3, 4, 5]`. Tuples will work as dictionary keys while lists will not, because dictionary keys are required to be hashable. All immutable objects in Python are hashable.
 
 ---
 
@@ -20,7 +20,10 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lists and sets are both mutable collections of objects, but used differently. Unlike lists, sets are unordered, and can only contain elements that are hashable. Sets do not contain duplicate elements. Sets also cannot be sliced. Sets in Python are implemented as hash table (which is why their elements must be hashable), which makes membership testing much faster than in lists, which are implemented as dynamic arrays.  
+>> Examples:
+>> * List: `dice_rolls = [4, 3, 1, 5, 4, 6]`, a list of rolls of a die in the sequence they were made. Additional rolls can be added to the end of the list with `dice_rolls.append(n)`.  
+>> * Set: `map_colors = set(['red', 'blue', 'green', 'orange'])`, a set of colors used in drawing a map. The order of colors in the set doesn't matter. It also doesn't make sense for there to be duplicate entries.  
 
 ---
 
@@ -28,7 +31,11 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> `lambda` is used to create a small, anonymous function that doesn't have to be defined explicitly using a `def …` statement. `lambda` is typically used in conjunction with other functions, such as `sorted`, `map` and `filter`, when it is useful and comprehendable to have a short function defined within the arguments of the other function.  
+>> Example with `sorted`:
+>> `>>> grade_tuples = [('a', 1), ('b', 5), ('c', 2), ('d', 4), ('f', 0)]`  
+    `>>> grade_frequency = sorted(grades, key=lambda grades: grades[1], reverse=True)`  
+    `[('b', 5), ('d', 4), ('c', 2), ('a', 1), ('f', 0)]`
 
 ---
 
@@ -36,7 +43,10 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> List comprehensions are a way to create lists, typically by modifying the contents of an existing list. Typically, list comprehensions can perform the same functions as `map` and `filter`, while being more intuitively readable. A disadvantage of list comprehensions is that they involve creating a temporary variable used for defining the new list, but whose scope is not limited to the list comprehension. That is, if the same variable is used elsewhere, there could be side effects. A list comprehension consists of an expression followed by a for loop involving another list to be passed to that expression, and then some number of for or if clauses (or none). Equivalents also exist for sets and dictionaries.   
+
+>> * Map example: `doubles = [x * 2 for x in range(5)]` is equivalent to `doubles = list(map(lambda x: x*2, range(5)))`  
+>> * Filter example:  `evens = [x for x in range(10) if x % 2 == 0]` is equivalent to `evens = list(filter(lambda x: x % 2 == 0, range(10)))`
 
 ---
 
@@ -51,7 +61,7 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 937
 
 b.  
 ```
@@ -59,7 +69,7 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 513
 
 c.  
 ```
@@ -67,7 +77,7 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+>> 7850
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
