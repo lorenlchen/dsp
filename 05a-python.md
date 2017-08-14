@@ -33,9 +33,9 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 >> `lambda` is used to create a small, anonymous function that doesn't have to be defined explicitly using a `def …` statement. `lambda` is typically used in conjunction with other functions, such as `sorted`, `map` and `filter`, when it is useful and comprehendable to have a short function defined within the arguments of the other function.  
 >> Example with `sorted`:
->> `>>> grade_tuples = [('a', 1), ('b', 5), ('c', 2), ('d', 4), ('f', 0)]  
-    >>> grade_frequency = sorted(grades, key=lambda grades: grades[1], reverse=True)  
-    [('b', 5), ('d', 4), ('c', 2), ('a', 1), ('f', 0)]`
+>> `>>> grade_tuples = [('a', 1), ('b', 5), ('c', 2), ('d', 4), ('f', 0)]`  
+    `>>> grade_frequency = sorted(grades, key=lambda grades: grades[1], reverse=True)`  
+    `[('b', 5), ('d', 4), ('c', 2), ('a', 1), ('f', 0)]`
 
 ---
 
