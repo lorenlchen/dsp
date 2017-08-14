@@ -15,7 +15,12 @@ def match_ends(words):
     >>> match_ends(['aaa', 'be', 'abc', 'hello'])
     1
     """
-    raise NotImplementedError
+
+    count = 0
+    for word in words:
+        if len(word) >= 2 and word[0] == word[-1]:
+            count = count + 1
+    return count
 
 
 def front_x(words):
@@ -32,8 +37,19 @@ def front_x(words):
     >>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
     ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
     """
-    raise NotImplementedError
+    x_list = []
+    other_list = []
 
+    for word in words:
+        if word[0] == 'x':
+            x_list.append(word)
+        else:
+            other_list.append(word)
+
+    x_sorted = sorted(x_list)
+    other_sorted = sorted(other_list)
+
+    return x_sorted + other_sorted
 
 def sort_last(tuples):
     """
@@ -49,7 +65,7 @@ def sort_last(tuples):
     >>> sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
     [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
     """
-    raise NotImplementedError
+    return sorted(tuples, key = lambda x: x[-1])
 
 
 def remove_adjacent(nums):
@@ -68,8 +84,15 @@ def remove_adjacent(nums):
     >>> remove_adjacent([])
     []
     """
-    raise NotImplementedError
+    new_list = []
 
+    if len(nums) <= 1:
+        return nums
+    new_list.append(nums[0])
+    for e in range(1, len(nums)):
+        if nums[e] != nums[e - 1]:
+            new_list.append(nums[e])
+    return new_list
 
 def linear_merge(list1, list2):
     """
@@ -85,4 +108,27 @@ def linear_merge(list1, list2):
     >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
-    raise NotImplementedError
+    merged_list = []
+    list1_pos = 0
+    list2_pos = 0
+    current_list1 = list1[0]
+    current_list2 = list2[0]
+
+    while list1_pos < len(list1) and list2_pos < len(list2):
+        if current_list1 < current_list2:
+            merged_list.append(current_list1)
+            list1_pos = list1_pos + 1
+            if list1_pos < len(list1):
+                current_list1 = list1[list1_pos]
+        else:
+            merged_list.append(current_list2)
+            list2_pos = list2_pos + 1
+            if list2_pos < len(list2):
+                current_list2 = list2[list2_pos]
+
+    if list1_pos < len(list1):
+        merged_list = merged_list + list1[list1_pos:]
+    if list2_pos <= len(list2):
+        merged_list = merged_list + list2[list2_pos:]
+
+    return merged_list
