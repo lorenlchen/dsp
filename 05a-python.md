@@ -23,7 +23,7 @@ How are Python lists and sets similar and different? Give examples of using both
 >> Lists and sets are both mutable collections of objects, but used differently. Unlike lists, sets are unordered, and can only contain elements that are hashable. Sets do not contain duplicate elements. Sets also cannot be sliced. Sets in Python are implemented as hash table (which is why their elements must be hashable), which makes membership testing much faster than in lists, which are implemented as dynamic arrays.  
 >> Examples:
 >> * List: `dice_rolls = [4, 3, 1, 5, 4, 6]`, a list of rolls of a die in the sequence they were made. Additional rolls can be added to the end of the list with `dice_rolls.append(n)`.  
->> * Set: `map_colors = set(['red', 'blue', 'green', 'orange'])`, a set of colors used in drawing a map. The order of colors in the set doesn't matter. It also doesn't make sense for there to be duplicate entries.  
+>> * Set: `map_colors = {'red', 'blue', 'green', 'orange'}`, a set of colors used in drawing a map. The order of colors in the set doesn't matter. It also doesn't make sense for there to be duplicate entries.  
 
 ---
 
@@ -47,7 +47,8 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 
 >> * Map example: `doubles = [x * 2 for x in range(5)]` is equivalent to `doubles = list(map(lambda x: x*2, range(5)))`  
 >> * Filter example:  `evens = [x for x in range(10) if x % 2 == 0]` is equivalent to `evens = list(filter(lambda x: x % 2 == 0, range(10)))`
-
+>> * Set example: `low_numbers = {x for x in input_list if x < 20} returns the elements of input_list (previously defined as some list of numbers) that are under 20, with no repeats or order.
+>> * Dict example: `square = {x: x ** 2 for x in range(10)` creates a dictionary with integers 0-10 as the keys, and their squares as the corresponding values.
 ---
 
 ### Complete the following problems by editing the files below:
@@ -95,8 +96,4 @@ Edit the 5 functions in [q7_lists.py](python/q7_lists.py)
 
 ### Q8. Parsing
 Write a script as indicated (using the football data) in [q8_parsing.py](python/q8_parsing.py)
-
-
-
-
 
