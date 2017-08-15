@@ -70,6 +70,6 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 What does `xargs` do? Give an example of how to use it.
 
 > > `xargs` can take what's given in STDOUT and convert it into arguments or groups of arguments (depending on the options) to be passed to commands. It is especially useful if you are trying to pass a very long list of arguments to a command that has an argument maximum, such as the result of a `find`, `ls`, or other command.   
->> A usage example is `find . -name "*~" -print0 | xargs -0 -rm` which should remove all files ending in `~` in the working directory, for example, the temp files created by emacs.  
+>> A usage example is `find . -name "*~" -print0 | xargs -0 rm` which should remove all files ending in `~` in the working directory, for example, the temp files created by emacs.  
  
 
