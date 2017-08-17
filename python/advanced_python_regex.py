@@ -44,7 +44,7 @@ with open('faculty.csv') as faculty:
     data = list(csv.DictReader(faculty))
     upenn_faculty = [dict(x) for x in data]
 
-print('Degrees and their distribution: ' + str(find_degrees(upenn_faculty)))
-print('Titles and their distribution: ' + str(find_titles(upenn_faculty)))
+print('There are ' + str(len(find_degrees(upenn_faculty))) + " different degrees. Their frequencies are: " + str(find_degrees(upenn_faculty)))
+print('There are ' + str(len(find_titles(upenn_faculty))) + " different titles. Their frequencies are: " + str(find_titles(upenn_faculty)))
 print('List of emails: ' + str(find_emails(upenn_faculty)))
-print('List of domains: ' + str(find_domains(upenn_faculty)))
+print('There are ' + str(len(find_domains(upenn_faculty))) + ' different domains: ' + str(find_domains(upenn_faculty)))
