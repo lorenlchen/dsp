@@ -27,9 +27,7 @@ def create_professor_dict(faculty_list):
         name = (prof['first_name'], prof['last_name'])
         info = [prof[' degree'], prof[' title'][:-17], prof[' email']]
         if name not in professor_dict:
-            professor_dict[name] = [info]
-        else:
-            professor_dict[name].append(info)
+            professor_dict[name] = info
     return professor_dict
 
 
@@ -44,8 +42,8 @@ for prof in faculty_names:
 
 faculty_dict = create_faculty_dict(faculty_names)
 professor_dict = create_professor_dict(faculty_names)
-print("Q6. " + str({prof: faculty_dict[prof] for prof in list(faculty_dict.keys())[:3]}))
-print("Q7. " + str({prof: professor_dict[prof] for prof in list(professor_dict.keys())[:3]}))
+print("Q6. " + str({x: faculty_dict[x] for x in list(faculty_dict)[:3]}))
+print("Q7. " + str({y: professor_dict[y] for y in list(professor_dict)[:3]}))
 
 #Q8
-print("Q8. " + str({prof: professor_dict[prof] for prof in sorted(list(professor_dict.keys()), key=lambda x: x[1])[:3]}))
+print("Q8. " + str({z: professor_dict[z] for z in sorted(list(professor_dict), key=lambda x: x[1])[:3]}))
