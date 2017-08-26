@@ -111,8 +111,10 @@ def linear_merge(list1, list2):
     merged_list = []
     list1_pos = 0
     list2_pos = 0
-    current_list1 = list1[0]
-    current_list2 = list2[0]
+    if list1:
+        current_list1 = list1[0]
+    if list2:
+        current_list2 = list2[0]
 
     while list1_pos < len(list1) and list2_pos < len(list2):
         if current_list1 < current_list2:
