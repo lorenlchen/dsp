@@ -7,7 +7,8 @@
 import csv
 
 with open('football.csv') as football:
-    football_reader = csv.DictReader(football)
+    data = list(csv.DictReader(football))
+    football_reader = [dict(x) for x in data]
     differentials = []
     for row in football_reader:
         team_name = row['Team']
