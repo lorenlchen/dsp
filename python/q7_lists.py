@@ -109,28 +109,11 @@ def linear_merge(list1, list2):
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
     merged_list = []
-    list1_pos = 0
-    list2_pos = 0
-    if list1:
-        current_list1 = list1[0]
-    if list2:
-        current_list2 = list2[0]
 
-    while list1_pos < len(list1) and list2_pos < len(list2):
-        if current_list1 < current_list2:
-            merged_list.append(current_list1)
-            list1_pos = list1_pos + 1
-            if list1_pos < len(list1):
-                current_list1 = list1[list1_pos]
+    while list1 and list2:
+        if list1[0] < list2[0]:
+            merged_list.append(list1.pop(0))
         else:
-            merged_list.append(current_list2)
-            list2_pos = list2_pos + 1
-            if list2_pos < len(list2):
-                current_list2 = list2[list2_pos]
+            merged_list.append(list2.pop(0))
 
-    if list1_pos < len(list1):
-        merged_list = merged_list + list1[list1_pos:]
-    if list2_pos <= len(list2):
-        merged_list = merged_list + list2[list2_pos:]
-
-    return merged_list
+    return merged_list + list1 + list2
