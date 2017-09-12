@@ -21,6 +21,6 @@ thinkplot.Cdf(cdf)
 thinkplot.Config(xlabel='Random Numbers', ylabel='CDF')
 ```
  
-![4.2 CDF](https://github.com/lorenlchen/dsp/blob/master/img/4_2_cdf.png
+![4.2 CDF](https://github.com/lorenlchen/dsp/blob/master/img/4_2_cdf.png)
 
 We see that the CDF is indeed (approximately) a straight line, so the distribution of values is uniform. This doesn't necessarily mean that the values are truly random, but the distribution does not seem to be biased in any way.
