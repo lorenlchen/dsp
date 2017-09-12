@@ -20,7 +20,7 @@ thinkplot.Config(xlabel='Number of children', ylabel='PMF')
 ```
 The resulting plot:
  
-![3.1 Actual Plot](https://github.com/lorenlchen/dsp/blob/master/statistics/images/3_1_actual_plot.png)
+![3.1 Actual Plot](https://github.com/lorenlchen/dsp/blob/master/img/3_1_actual_plot.png)
  
 Then, we can bias the data using the above function and plot the new PMF on the same graph.
 ```
@@ -31,7 +31,7 @@ thinkplot.Config(xlabel='Number of children', ylabel='PMF')
 ```
 The resulting plot:
  
-![3.1 Actual vs. Biased Plot](https://github.com/lorenlchen/dsp/blob/master/statistics/images/3_1_biased_plot.png)
+![3.1 Actual vs. Biased Plot](https://github.com/lorenlchen/dsp/blob/master/img/3_1_biased_plot.png)
  
 As we can see, the biased PMF is shifted right from the actual distribution. A notable thing is that in the biased distribution, it seems like there are no families with 0 children, since there would be no one to ask how many siblings they have. While the actual plot is monotone decreasing, the biased plot has a peak in the middle.
 
