@@ -90,7 +90,7 @@ Elvis Presley had a twin brother who died at birth.  What is the probability tha
 ```
 identical = 1/300
 fraternal = 1/125
-any_twin = identical + franternal
+any_twin = identical + fraternal
 prob = identical/any_twin
 ```
 We find that there is a 29.4% chance that Elvis was an identical twin.
