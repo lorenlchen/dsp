@@ -7,11 +7,11 @@ We first generate the random numbers with: `num_list = [np.random.random() for x
 Then, we can plot the PMF (using the supplied class and plot functions) with: 
 ```
 pmf = thinkstats2.Pmf(num_list)
-thinkplot.Pmf(pmf)
+thinkplot.Pmf(pmf, linewidth=0.05)
 thinkplot.Config(xlabel='Random Numbers', ylabel='PMF')
 ```
  
-[Insert PMF Plot here]
+![4.2 PMF](https://github.com/lorenlchen/dsp/blob/master/img/4_2_pmf.png)
 
 The problem with using the PMF to assess the distribution is that with so many values, it's hard to visually determine where any peaks and valleys are. We can mitigate this by looking at the CDF instead, which maps each value to its percentile rank in the distribution.
 
@@ -21,6 +21,6 @@ thinkplot.Cdf(cdf)
 thinkplot.Config(xlabel='Random Numbers', ylabel='CDF')
 ```
  
-[Insert CDF Plot Here]
+![4.2 CDF](https://github.com/lorenlchen/dsp/blob/master/img/4_2_cdf.png
 
 We see that the CDF is indeed (approximately) a straight line, so the distribution of values is uniform. This doesn't necessarily mean that the values are truly random, but the distribution does not seem to be biased in any way.
